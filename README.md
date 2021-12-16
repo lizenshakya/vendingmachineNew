@@ -22,6 +22,7 @@ Core features include:
   - git clone https://github.com/lizenshakya/vendingmachineNew (Clone the project)
   - Mongo DB should be up and running before starting the project
   - npm install (Install the dependencies)
+  - in the config file create a new .env file using .env.sample
     # Start server
       - npm run start
       - Now application is up and running. Go to browser and 'http://localhost:5000' | 'https://localhost:8443'
@@ -38,3 +39,5 @@ Core features include:
     - Your changes will be auto reflected. You are good to make changes to your files. 
     
     (Note:** docker-compose -up -d --build (Run this command instead of those two and application will run immediately after build is finished.))
+
+Do reference apidocs for curl commands

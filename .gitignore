@@ -8,3 +8,4 @@ dist
 
 .vscode
 server/.DS_Store
+config/.env

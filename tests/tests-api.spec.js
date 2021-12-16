@@ -8,8 +8,7 @@ const Product = require('../model/product');
 const Coin = require('../model/coin'); 
 const Purchase = require('../model/productPurchase'); 
 const insertInitialData = require('../config/dbInit')
-const baseApi = 'http://localhost:5000';
-
+const baseApi = 'http://localhost:8000';
 const purchaseData = {
     coins: 100 + 2 * 20 + 3 * 30 + 4 * 25, // Total no. of coins after purchase
     products: [
@@ -95,7 +94,7 @@ describe('Testing GET /api/product API - Checking initially inserted products an
     });
 });
 
-describe('Testing POST /api/products/checkout API - Test for purchase', () => {
+describe('Testing POST /api/product/checkout API - Test for purchase', () => {
     it(`it should handle purchase of 2 coke, 3 dew & 4 pepsi properly -
         product stock, coins should be updated and purchase detail should be added`, async () => {
         try {
@@ -152,7 +151,7 @@ describe('Testing POST /api/product/refund API - Test for refund', () => {
                 .request(baseApi)
                 .post('/api/product/refund')
                 .send(returnPayload);
-
+            console.log(returnPayload, ">>>>>>>>>>>>>")
             expect(resp).to.have.status(200);
             expect(resp.body).to.be.an('object');
             expect(resp.body).to.have.own.property('success');
