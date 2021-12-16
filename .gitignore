@@ -1,0 +1,11 @@
+
+node_modules
+package-lock.json
+
+# folders not needed
+logs
+dist
+
+.vscode
+server/.DS_Store
+config/.env
