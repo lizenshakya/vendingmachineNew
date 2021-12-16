@@ -1,0 +1,20 @@
+[
+    {
+      "productId": "Pepsi",
+      "productName": "Pepsi",
+      "productRate": 25,
+      "productStock": 10
+    },
+    {
+      "productId": "Dew",
+      "productName": "Dew",
+      "productRate": 30,
+      "productStock": 10
+    },
+    {
+      "productId": "Coke",
+      "productName": "Coke",
+      "productRate": 20,
+      "productStock": 10
+    }
+  ]
