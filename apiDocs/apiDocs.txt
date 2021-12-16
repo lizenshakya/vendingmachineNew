@@ -1,0 +1,60 @@
+-----------------
+For get all product and info
+curl --location --request GET 'http://localhost:6000/api/product'
+
+-----------------
+For buy
+
+curl --location --request POST 'http://localhost:6000/api/product/checkout' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "coins": 330,
+    "products": [
+        {
+            "productId": "Coke",
+            "productName": "Coke",
+            "productRate": 20,
+            "productQuantity": 2,
+            "productStock": 8
+        },
+        {
+            "productId": "Dew",
+            "productName": "Dew",
+            "productRate": 30,
+            "productQuantity": 3,
+            "productStock": 7
+        },
+        {
+            "productId": "Pepsi",
+            "productName": "Pepsi",
+            "productRate": 25,
+            "productQuantity": 4,
+            "productStock": 6
+        }
+    ]
+}'
+
+------------------
+For refund
+
+curl --location --request POST 'http://localhost:6000/api/product/refund' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "coins": 260,
+  "products": [
+    { "productName": "Coke", "productStock": 1 },
+    { "productName": "Pepsi", "productStock": 2 }
+  ],
+  "refundData": [
+    {
+      "_id": "61bac602bd15d4fdb6787a7a",
+      "refundRate": 20,
+      "refundQuantity": 1
+    },
+    {
+      "_id": "61bac602bd15d4fdb6787a7c",
+      "refundRate": 25,
+      "refundQuantity": 2
+    }
+  ]
+}'
